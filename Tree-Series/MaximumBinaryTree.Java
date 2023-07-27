@@ -11,7 +11,7 @@ class Solution {
             }
             stack.push(curr);
         }
-        
+
         return stack.isEmpty() ? null : stack.removeLast();
     }
 }
