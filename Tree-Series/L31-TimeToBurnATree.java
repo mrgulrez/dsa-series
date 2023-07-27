@@ -27,11 +27,11 @@ public class Solution
         HashMap<BinaryTreeNode<Integer>,Integer> vis = new HashMap<>();
         vis.put(target, 1);
         int maxi = 0;
-        
+
         while(!q.isEmpty()) {
             int sz = q.size();
             int fl = 0;
-            
+
             for(int i = 0;i<sz;i++) {
                 BinaryTreeNode<Integer> node = q.poll();
                 if(node.left != null && vis.get(node.left) == null) {
