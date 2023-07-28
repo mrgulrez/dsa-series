@@ -58,5 +58,5 @@ class Solution {
             middle.val = t; 
         }
     }
-   
+
 }
