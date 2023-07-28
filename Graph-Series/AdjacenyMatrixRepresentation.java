@@ -4,7 +4,7 @@ import java.io.*;
 
 class GFG {
 	public static void main (String[] args) {
-		int n = 3, m = 3; 
+		int n = 3, m = 3;
 		int adj[][] = new int[n+1][n+1]; 
 		
 		// edge 1---2
