@@ -8,16 +8,17 @@ class Tuple {
         col = _col; 
     }
 }
+
 class Solution {
     public List<List<Integer>> verticalTraversal(TreeNode root) {
-        TreeMap<Integer, TreeMap<Integer, PriorityQueue<Integer>>> map = new TreeMap<>(); 
+        TreeMap<Integer, TreeMap<Integer, PriorityQueue<Integer>>> map = new TreeMap<>();
         Queue<Tuple> q = new LinkedList<Tuple>();
-        q.offer(new Tuple(root, 0, 0)); 
+        q.offer(new Tuple(root, 0, 0));
         while(!q.isEmpty()) {
-            Tuple tuple = q.poll(); 
-            TreeNode node = tuple.node; 
-            int x = tuple.row; 
-            int y = tuple.col; 
+            Tuple tuple = q.poll();
+            TreeNode node = tuple.node;
+            int x = tuple.row;
+            int y = tuple.col;
             
             
             if (!map.containsKey(x)) {
@@ -27,14 +28,16 @@ class Solution {
                 map.get(x).put(y, new PriorityQueue<>());
             }
             map.get(x).get(y).offer(node.val);
-            
+
             if(node.left != null) {
-                q.offer(new Tuple(node.left, x - 1, y + 1)); 
-            } 
+                q.offer(new Tuple(node.left, x - 1, y + 1));
+            }
+
             if(node.right != null) {
-                q.offer(new Tuple(node.right, x + 1, y + 1)); 
+                q.offer(new Tuple(node.right, x + 1, y + 1));
             }
         }
+
         List<List<Integer>> list = new ArrayList<>();
         for (TreeMap<Integer, PriorityQueue<Integer>> ys : map.values()) {
             list.add(new ArrayList<>());
