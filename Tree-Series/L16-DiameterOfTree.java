@@ -2,7 +2,7 @@ public class Solution {
     public int diameterOfBinaryTree(TreeNode root) {
         int[] diameter = new int[1];
         height(root, diameter);
-        return diameter[0];        
+        return diameter[0];
     }
 
     private int height(TreeNode node, int[] diameter) {

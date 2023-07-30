@@ -6,7 +6,7 @@ class Solution {
         if(root == null) return wrapList;
         
         queue.offer(root);
-        boolean flag = true; 
+        boolean flag = true;
         while(!queue.isEmpty()){
             int levelNum = queue.size();
             List<Integer> subList = new ArrayList<Integer>(levelNum);
@@ -17,7 +17,7 @@ class Solution {
                 if(flag == true) subList.add(queue.poll().val);
                 else subList.add(0, queue.poll().val);
             }
-            flag = !flag; 
+            flag = !flag;
             wrapList.add(subList);
         }
         return wrapList;
