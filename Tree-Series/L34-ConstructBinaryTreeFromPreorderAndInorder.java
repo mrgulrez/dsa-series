@@ -19,7 +19,7 @@ class Solution {
       inMap.put(inorder[i], i);
     }
 
-    TreeNode root = buildTree(preorder, 0, preorder.length - 1, inorder, 0, 
+    TreeNode root = buildTree(preorder, 0, preorder.length - 1, inorder, 0,
     inorder.length - 1, inMap);
     return root;
   }
