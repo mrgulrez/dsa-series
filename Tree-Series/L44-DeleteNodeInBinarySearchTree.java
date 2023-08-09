@@ -26,6 +26,7 @@ class Solution {
         }
         return dummy;
     }
+
     public TreeNode helper(TreeNode root) {
             if (root.left == null) {
                 return root.right;
